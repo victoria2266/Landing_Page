@@ -1,163 +1,138 @@
-html, body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
+html,
 body {
-    width: 100%;
-    height: 100vh;
-    background: url(./img/clouds.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: table;
-    font-family: Montserrat;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: url(clouds.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table;
+  font-family: Montserrat;
+}
+
 .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 80px;
-    border-bottom: 1px solid rgba(255,255,255,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
+
 .logo {
-    letter-spacing: 1px;
-    float: left;
-    color: #fff;
-    font-size: 22px;
-    line-height: 80px;
-    padding: 0 6em;
-}
-.menü {
-    float: right;
-    line-height: 50px;
-    margin: 0 6em;
-}
-.menü ul {
-    list-style: none;
-}
-.menü ul li {
-    display: inline-block;
-}
-.menü ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    font-weight: lighter;
-    padding: 0 20px;
+  letter-spacing: 1px;
+  float: left;
+  color: #fff;
+  font-size: 22px;
+  line-height: 80px;
+  padding: 0 6em;
 }
 
-.menü li:hover {
-    transform: translateY(10px);
+.menu {
+  float: right;
+  line-height: 50px;
+  margin: 0 auto;
 }
 
-.menü ul li:nth-child(none):hover {
-
+.menu ul {
+  list-style: none;
 }
 
-/*
+.menu ul li {
+  display: inline-block;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: lighter;
+  padding: 0 20px;
+}
+
+.menu ul li:hover {
+  transform: translateY(10px);
+}
+
+.menu ul li:nth-child(5) {
+    transform: none;
+}
+
 ul li:nth-child(5) a {
-    color: white;
-    border: 1px solid white;
-    padding: 10px 20px;
-    border-radius: 4px;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 4px;
 }
-*/
+
 ul li:nth-child(5) a {
-    color: #1393cd;
-    border: 1px solid #009f8b;
-    padding: 10px 20px;
-    border-radius: 4px;
+  color: #1393cd;
+  border: 1px solid #009f8b;
+  padding: 10px 20px;
+  border-radius: 4px;
 }
+
 .header {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .header h1 {
-    color: #fff;
-    font-size: 46px;
-    font-weight: 400;
-    margin-bottom: 8px;
+  color: #fff;
+  font-size: 46px;
+  font-weight: 400;
+  margin-bottom: 8px;
 }
+
 .header p {
-    color: #fff;
-    font-size: 24px;
-    font-weight: lighter;
-    }
+  color: #fff;
+  font-size: 24px;
+  font-weight: lighter;
+}
 
 .header button {
-    color: #fff;
-    background: #1393cd;
-    padding: 18px 38px;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    margin-top: 40px;
+  color: #fff;
+  background: #1393cd;
+  padding: 18px 38px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 40px;
 }
 
 .header button:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
-
-
-@keyframes rotate {
-	100% {
-		transform: rotate(1turn);
-	}
+@media only screen and (max-width: 500px) {
+  .nav {
+    margin: 0 auto;
+  }
+  .menu {
+    float: none;
+    position: relative;
+    left: 5rem;
+  }
+  .nav .menu ul li {
+    display: block;
+    line-height: 26px;
+  }
+  .header {
+    margin-top: 90px;
+  }
 }
 
-ul li:nth-child(5) a {
-    color: #1393cd;
-    border: 1px solid #009f8b;
-    padding: 10px 20px;
-    border-radius: 4px;
- }
-
-/*.rainbow {
-	position: relative;
-	z-index: 0;
-	width: 400px;
-	height: 300px;
-	border-radius: 10px;
-	overflow: hidden;
-    padding: 2rem;
- }
-*/	
-	&::before {
-		content: '';
-		position: absolute;
-		z-index: -2;
-		left: -50%;
-		top: -50%;
-		width: 200%;
-		height: 200%;
-		background-color: #399953;
-		background-repeat: no-repeat;
-		background-size: 50% 50%, 50% 50%;
-		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-		background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
-		animation: rotate 4s linear infinite;
-	}
-	
-	&::after {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		left: 6px;
-		top: 6px;
-		width: calc(100% - 12px);
-		height: calc(100% - 12px);
-		background: white;
-		border-radius: 5px;
-	}
 
 
 
